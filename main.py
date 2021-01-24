@@ -1,3 +1,5 @@
+import time
+
 from sequentiel import product_matrix_vector, product_matrix_matrix, product_vector_matrix
 
 
@@ -19,7 +21,14 @@ if __name__ == '__main__':
     matrix_right = [[1, 0], [0, 1]]
     matrix_right2 = [[1, 1], [1, 1]]
 
-    print(product_matrix_vector(matrix_left, vector))
+    begin = time.time()
+
+    matrix_test = [[1, 2], [3, 4], [5, 6], [7, 8], [9, 10], [11, 12]]
+    vector_test = [13, 14]
+
+    print(product_matrix_vector(matrix_test, vector_test))
+    end = time.time() - begin
+    print(end)
     print(product_matrix_matrix(matrix_left, matrix_right))
     print(product_vector_matrix(vector, matrix_right))
     print(product_matrix_matrix(matrix_left, matrix_right2))

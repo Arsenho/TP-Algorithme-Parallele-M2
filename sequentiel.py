@@ -1,3 +1,6 @@
+import time
+
+
 def sum_vector(first, second):
     sum_result = 0
     if len(first) != len(second):

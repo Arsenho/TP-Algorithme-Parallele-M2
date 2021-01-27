@@ -90,10 +90,7 @@ def parallel_product_matrix_vector(matrix, vector):
 
 def parallel_product_matrix_matrix(left_matrix, right_matrix):
     begin = time.time()
-
-    comm = get_communicator()
-    rank = comm.Get_rank()
-    size = comm.Get_size()
+    
     size_sub_right_matrix = len(right_matrix) // size
     size_sub_left_matrix = len(left_matrix) // size
 

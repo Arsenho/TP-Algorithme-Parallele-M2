@@ -1,3 +1,5 @@
+#!/bin/python3
+
 from mpi4py import MPI
 import numpy as np
 import time
@@ -90,7 +92,7 @@ def parallel_product_matrix_vector(matrix, vector):
 
 def parallel_product_matrix_matrix(left_matrix, right_matrix):
     begin = time.time()
-    
+
     size_sub_right_matrix = len(right_matrix) // size
     size_sub_left_matrix = len(left_matrix) // size
 
@@ -135,5 +137,3 @@ def parallel_product_matrix_matrix(left_matrix, right_matrix):
     print("rank ", rank, ", temps d'execution du resulat final: ", end)
 
 
-# parallel_product_matrix_vector([[1, 2], [3, 4], [5, 6], [7, 8], [9, 10], [11, 12]], [13, 14])
-parallel_product_matrix_matrix([[1, 2], [3, 4], [1, 2], [3, 4]], [[1, 0], [0, 1], [1, 0], [0, 1]])

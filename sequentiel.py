@@ -1,3 +1,5 @@
+#!/bin/python3
+
 import time
 
 
@@ -9,6 +11,17 @@ def sum_vector(first, second):
         for i in range(0, len(first)):
             sum_result += first[i] * second[i]
         return sum_result
+
+
+def matrix_tran(matrix):
+    column = []
+    trans_matrix = []
+    for cpt in range(0, len(matrix)):
+        for line in matrix:
+            column.append(line[cpt])
+        trans_matrix.append(column)
+        column = []
+    return trans_matrix
 
 
 def product_matrix_vector(matrix, vector):
@@ -41,5 +54,5 @@ def product_matrix_matrix(matrix_left, matrix_right):
         print("Veillez vous rassurer que le nombre de ligne de la matrice est egale au nombre de colone du vecteur")
     else:
         for line in matrix_left:
-            product_result.append(product_vector_matrix(line, matrix_right))
+            product_result.append(product_vector_matrix(line, matrix_tran(matrix_right)))
         return product_result

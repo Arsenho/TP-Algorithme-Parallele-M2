@@ -5,6 +5,7 @@ import time
 from sequentiel import product_matrix_vector, product_matrix_matrix, product_vector_matrix, matrix_tran
 from parallel import parallel_product_matrix_vector, parallel_product_matrix_matrix
 
+
 # This is a sample Python script.
 
 # Press Shift+F10 to execute it or replace it with your code.
@@ -86,7 +87,7 @@ if __name__ == '__main__':
             restart = False
 
     goodbye = """
-        Nous vous remercions pour d'avoir utilisé notre programme
-        En espérant vous revoir, nous vous disons à plus !!!
+        Nous vous remercions d'avoir bien voulu utiliser notre programme
+            En espérant vous revoir, nous vous disons à plus !!!
     """
     print(goodbye)
